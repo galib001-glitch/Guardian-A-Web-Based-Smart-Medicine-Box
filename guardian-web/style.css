@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.drawer {
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  padding: 6px;
+  margin: 4px;
+}
+
+#qr-reader {
+  width: 300px;
+  margin: 10px auto;
+}
+
+#loadingGuide h3 {
+  margin-bottom: 5px;
+}
+
+#loadingGuide ul {
+  margin-left: 20px;
+}
+
+#loadingGuide hr {
+  opacity: 0.3;
+}

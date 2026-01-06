@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prescription QR Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- QR Code Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+<h1>Prescription QR Code Generator</h1>
+
+<div class="card">
+
+  <h2>Medicine Input</h2>
+
+  <p><b>Format:</b> Time, Medicine Name, Quantity</p>
+  <p><b>Time must be:</b> morning | noon | evening | night</p>
+
+  <textarea id="medInput" placeholder="
+morning,Napa,1
+noon,Ace,1
+evening,Vitamin,2
+night,Melatonin,1"></textarea>
+
+  <button onclick="generateQR()">Generate QR Code</button>
+
+</div>
+
+<div class="card">
+
+  <h2>Generated QR Code</h2>
+
+  <div id="qrcode"></div>
+
+  <button id="downloadBtn" onclick="downloadQR()" disabled>
+    Download QR Image
+  </button>
+
+  <h3>Generated JSON</h3>
+  <pre id="jsonOutput"></pre>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guardian – Smart Medicine Box</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- QR Scanner -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+
+<body>
+
+<h1>Guardian – Smart Medicine Box</h1>
+
+<!-- DEVICE STATUS -->
+<div class="card">
+  <h2>Device Status</h2>
+  <p id="deviceStatus">Checking...</p>
+</div>
+
+<!-- QR IMPORT -->
+<div class="card">
+  <h2>Import Prescription QR</h2>
+
+  <button onclick="startQRScanner()">📷 Scan with Camera</button>
+  <div id="qr-reader"></div>
+
+  <hr>
+
+  <input type="file" id="qrImage" accept="image/*">
+  <button onclick="scanFromImage()">🖼️ Upload QR Image</button>
+</div>
+
+<!-- SCHEDULE -->
+<div class="card">
+  <h2>Drawer Schedule</h2>
+
+  <div class="drawer">Drawer 1:
+    <input id="h1" type="number" min="0" max="23">
+    <input id="m1" type="number" min="0" max="59">
+    <button onclick="saveTime(1)">Save</button>
+  </div>
+
+  <div class="drawer">Drawer 2:
+    <input id="h2" type="number" min="0" max="23">
+    <input id="m2" type="number" min="0" max="59">
+    <button onclick="saveTime(2)">Save</button>
+  </div>
+
+  <div class="drawer">Drawer 3:
+    <input id="h3" type="number" min="0" max="23">
+    <input id="m3" type="number" min="0" max="59">
+    <button onclick="saveTime(3)">Save</button>
+  </div>
+
+  <div class="drawer">Drawer 4:
+    <input id="h4" type="number" min="0" max="23">
+    <input id="m4" type="number" min="0" max="59">
+    <button onclick="saveTime(4)">Save</button>
+  </div>
+</div>
+
+<!-- ADD MEDICINE -->
+<div class="card">
+  <h2>Add Medicine</h2>
+  <input id="medName" placeholder="Medicine Name">
+  <input id="medQty" type="number" min="1" placeholder="Qty">
+  <select id="medDrawer">
+    <option value="1">Drawer 1</option>
+    <option value="2">Drawer 2</option>
+    <option value="3">Drawer 3</option>
+    <option value="4">Drawer 4</option>
+  </select>
+  <button onclick="addMedicine()">Add</button>
+</div>
+
+<!-- 🔥 MEDICINE LOADING GUIDE -->
+<div class="card">
+  <h2>🧾 Medicine Loading Guide</h2>
+  <div id="loadingGuide">Loading...</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
