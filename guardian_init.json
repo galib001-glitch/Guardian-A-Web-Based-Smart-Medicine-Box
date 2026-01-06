@@ -1,0 +1,70 @@
+{
+  "device": {
+    "online": false,
+    "activeDrawer": 0,
+    "rtcTime": "00:00:00",
+    "lastEvent": "System Initialized"
+  },
+
+  "schedule": {
+    "1": {
+      "hour": 8,
+      "minute": 0
+    },
+    "2": {
+      "hour": 13,
+      "minute": 0
+    },
+    "3": {
+      "hour": 18,
+      "minute": 0
+    },
+    "4": {
+      "hour": 22,
+      "minute": 0
+    }
+  },
+
+  "drawers": {
+    "1": {
+      "medicines": {
+        "m1": {
+          "name": "Napa",
+          "qty": 1
+        },
+        "m2": {
+          "name": "Seclo",
+          "qty": 1
+        }
+      }
+    },
+    "2": {
+      "medicines": {
+        "m1": {
+          "name": "Ace",
+          "qty": 1
+        }
+      }
+    },
+    "3": {
+      "medicines": {
+        "m1": {
+          "name": "Vitamin",
+          "qty": 2
+        }
+      }
+    },
+    "4": {
+      "medicines": {
+        "m1": {
+          "name": "Calcium",
+          "qty": 1
+        }
+      }
+    }
+  },
+
+  "notifications": {
+    "-init": "System ready"
+  }
+}
